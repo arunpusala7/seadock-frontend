@@ -43,6 +43,7 @@
   --card-foreground: oklch(0.18 0.04 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.04 250);
+  /* --primary: oklch(0.22 0.045 250); */
   --primary: oklch(0.22 0.045 250);
   --primary-foreground: oklch(0.98 0.005 85);
   --secondary: oklch(0.96 0.01 80);
@@ -58,7 +59,8 @@
   --ring: oklch(0.22 0.045 250);
   --cream: oklch(0.96 0.018 80);
   --gold: oklch(0.72 0.09 70);
-  --navy: oklch(0.22 0.045 250);
+  /* --navy: oklch(0.22 0.045 250); */
+  --navy: oklch(35.183% 0.19889 267.004);
 }
 
 @layer base {

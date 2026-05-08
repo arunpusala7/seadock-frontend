@@ -17,10 +17,21 @@ import img8 from "@/assets/img-08.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Seadock — Fresh Seafood Delivered in 30 Minutes" },
-      { name: "description", content: "Coastal-fresh fish and seafood, hand-cleaned by master fishmongers, delivered chilled to your doorstep in 60–90 minutes." },
-      { property: "og:title", content: "Seadock — Fresh from the Sea" },
-      { property: "og:description", content: " never compromised. Hand-picked seafood delivered across Hyderabad in 60–90 minutes." },
+      { title: "Seadock — Fresh Seafood Delivered in 30–60 Minutes" },
+      {
+        name: "description",
+        content:
+          "Fresh seafood delivered fast in Hyderabad. Cleaned, cut, and ready-to-cook fish, prawns, and crab — sourced daily and delivered chilled to your doorstep.",
+      },
+      {
+        property: "og:title",
+        content: "Seadock — Premium Fresh Seafood",
+      },
+      {
+        property: "og:description",
+        content:
+          "Order fresh seafood online — fish, prawns, crab, and more. Expertly cleaned and delivered across Hyderabad in under 60 minutes.",
+      },
     ],
   }),
   component: HomePage,
@@ -34,7 +45,7 @@ const products = [
   { name: "ROHU CURRY CUT WITH HEAD", img: img5 },
   { name: "PRAWNS", img: img6 },
   { name: "ANCHOCIES", img: img7 },
-  { name: "BOMMIDAILU", img: img8 },
+  { name: "SPINY EEL", img: img8 },
 ];
 
 const promises = [
@@ -45,12 +56,55 @@ const promises = [
 ];
 
 const testimonials = [
-    { quote: "The prawns arrived so fresh they still smelled of the sea. My grandmother said it reminded her of Vizag mornings. Seadock is now a weekend ritual.", name: "Ananya Reddy", loc: "Banjara Hills, Hyderabad" },
-    { quote: "I ordered seer fish at 7pm, and it was at my door before 7:40. Beautifully cleaned, perfectly iced. No supermarket comes close.", name: "Karthik Menon", loc: "Jubilee Hills, Hyderabad" },
-    { quote: "As a home chef, freshness is non-negotiable. Seadock's pomfret rivals what I've bought at Mangalore harbours — that should tell you everything.", name: "Saanvi Iyer", loc: "Gachibowli, Hyderabad" },
-    { quote: "Finding high-quality crab in the city was a struggle until I found Seadock. The meat was sweet, firm, and delivered exactly when promised.", name: "Rajesh Varma", loc: "Kondapur, Hyderabad" },
-    { quote: "The master-cut fillets saved me 20 minutes of prep time. It's rare to find a service that understands both quality and the value of time.", name: "Priyanka Chawla", loc: "Madhapur, Hyderabad" },
-  ];
+  {
+    quote: "The basa cubes were incredibly soft and clean-cut — perfect for my fish fry. No muddy smell at all, which is rare.",
+    name: "Ananya Reddy",
+    loc: "Banjara Hills, Hyderabad",
+    product: "BASA CUBES",
+  },
+  {
+    quote: "The sea crab was fresh, heavy, and full of meat. The sweetness really stood out once cooked — felt like coastal quality.",
+    name: "Rajesh Varma",
+    loc: "Kondapur, Hyderabad",
+    product: "SEA CRAB",
+  },
+  {
+    quote: "Tilapia fillets were neatly trimmed and boneless — saved me so much prep time. Perfect for quick weekday meals.",
+    name: "Priyanka Chawla",
+    loc: "Madhapur, Hyderabad",
+    product: "TILAPIA FILLET",
+  },
+  {
+    quote: "The roopchand curry cut pieces were evenly sliced and super fresh. My fish curry tasted just like what we get back home.",
+    name: "Saanvi Iyer",
+    loc: "Gachibowli, Hyderabad",
+    product: "ROOPCHAND CURRY CUT",
+  },
+  {
+    quote: "Rohu with head was exactly what I needed for traditional curry. Fresh, well-cleaned, and no extra effort required.",
+    name: "Karthik Menon",
+    loc: "Jubilee Hills, Hyderabad",
+    product: "ROHU CURRY CUT WITH HEAD",
+  },
+  {
+    quote: "The prawns were deveined perfectly and tasted sweet and fresh. Honestly better than what I’ve bought locally.",
+    name: "Ananya Reddy",
+    loc: "Banjara Hills, Hyderabad",
+    product: "PRAWNS",
+  },
+  {
+    quote: "Anchovies were super fresh and perfect for fry — crispy and flavorful just like coastal street food.",
+    name: "Saanvi Iyer",
+    loc: "Gachibowli, Hyderabad",
+    product: "ANCHOCIES",
+  },
+  {
+    quote: "Spiny eel was cleaned really well, which is usually a hassle. The texture and taste were spot on.",
+    name: "Rajesh Varma",
+    loc: "Kondapur, Hyderabad",
+    product: "SPINY EEL",
+  },
+];
 
 function HomePage() {
   return (
@@ -58,20 +112,21 @@ function HomePage() {
       <Header />
       <main className="flex-1">
         {/* HERO */}
-        <section className="bg-cream relative">
+        <section className="bg-cream relative" id="home">
           <div className="mx-auto max-w-7xl px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-background border border-border text-xs tracking-[0.2em] uppercase">
                 <Clock className="h-3.5 w-3.5" /> Delivered in 60–90 mins
               </div>
               <h1 className="mt-8 font-display text-5xl md:text-7xl text-navy leading-[1.05]">
-                The Ocean's Freshest,<br />
-                <span className="italic-serif text-navy/80">Cut &amp; Packed</span><br />
-                For Your Kitchen.
-              </h1>
-              <p className="mt-8 text-muted-foreground max-w-lg leading-relaxed">
-                Raw fish and seafood sourced at dawn from coastal harbours, hand-cleaned by master fishmongers, and delivered chilled to your doorstep — never compromised.
-              </p>
+  Fresh Seafood,<br />
+  <span className="italic-serif text-navy/80">Cleaned &amp; Cut</span><br />
+  For Your Kitchen.
+</h1>
+
+<p className="mt-8 text-muted-foreground max-w-lg leading-relaxed">
+  Fresh fish, prawns, and crab sourced daily, expertly cleaned and cut by master fishmongers, and delivered chilled to your doorstep in Hyderabad — ready to cook, no compromise on quality.
+</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href="https://order.seadock.in" className="bg-navy text-cream px-7 py-4 text-xs tracking-[0.2em] uppercase inline-flex items-center gap-3 hover:bg-navy/90 transition">
                   Order Now <ArrowUpRight className="h-4 w-4" />
@@ -126,7 +181,7 @@ function HomePage() {
     </div>
 
     {/* Right Side: Content and Feature Grid */}
-    <div className="reveal">
+    <div className="reveal" id="ourstory">
       <div className="text-xs tracking-[0.3em] text-gold uppercase font-sans">— Our Story</div>
       <h2 className="mt-6 font-display text-4xl md:text-5xl text-navy leading-tight">
         We believe seafood should taste <span className="italic font-display text-teal-sea">fresh and authentic,</span> every single time.

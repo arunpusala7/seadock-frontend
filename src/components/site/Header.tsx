@@ -5,9 +5,9 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
+  { href: "#ourstory", label: "About Us" },
   { href: "#products", label: "Our Products" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "#order", label: "Contact Us" },
 ] as const;
 
 export function Header() {
