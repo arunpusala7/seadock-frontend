@@ -330,7 +330,7 @@ function HomePage() {
               <div className="aspect-[4/3] overflow-hidden border border-border">
                 <iframe
                   title="Seadock Hyderabad"
-                  src="https://www.google.com/maps?q=Hyderabad,Telangana&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.7304615076364!2d78.44661420930206!3d17.52037558332029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f5d14dff2c3%3A0xc70efc8b1d8b7691!2sSeadock!5e0!3m2!1sen!2sin!4v1778486682068!5m2!1sen!2sin"
                   className="w-full h-full"
                   loading="lazy"
                 />
@@ -340,10 +340,10 @@ function HomePage() {
                 <div className="text-[10px] tracking-[0.3em] text-gold mt-2 uppercase">Hyderabad, Telangana</div>
                 <div className="mt-10 space-y-7 text-sm">
                   {[
-                    ["Address","Plot 42, Jubilee Hills, Road No. 36\nHyderabad, Telangana — 500033"],
-                    ["Call Us","+91 98765 43210"],
-                    ["Email","hello@seadock.com"],
-                    ["Delivery Hours","Everyday, 7:00 AM – 10:30 PM"],
+                    ["Address","survey no 264, Plot No, Block no 3, 33, Rd Number 15, Phase 1, Jeedimetla\n Hyderabad, Telangana 500055"],
+                    ["Call Us","+91 8977512664"],
+                    ["Email","feedback@seadock.in"],
+                    ["Delivery Hours","Everyday, 7:00 AM – 06:00 PM"],
                   ].map(([k,v]) => (
                     <div key={k}>
                       <div className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">{k}</div>
